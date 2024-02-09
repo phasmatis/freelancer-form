@@ -67,14 +67,14 @@ function displayPrices() {
   console.log("Average Starting Price", averagePrice.toFixed(2));
 }
 
-setInterval(() => {
+const intervalId = setInterval(() => {
   addFreelancer(
     getRandomElement(freelancers).name,
     getRandomElement(freelancers).occupation,
     getRandomStartingPrice()
   );
   displayPrices();
-  if (freelancers.length >= 30) {
+  if (freelancers.length >= 10) {
     clearInterval(intervalId);
   }
 }, 3000);
