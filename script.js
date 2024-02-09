@@ -74,6 +74,9 @@ setInterval(() => {
     getRandomStartingPrice()
   );
   displayPrices();
+  if (freelancers.length >= 30) {
+    clearInterval(intervalId);
+  }
 }, 3000);
 
 render();
